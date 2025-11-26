@@ -27,7 +27,7 @@ button:hover{background:var(--vert);color:var(--noir);transform:scale(1.07)}
 .lang-selector button{margin:0 6px;padding:8px 14px;font-size:0.9em;background:transparent;color:var(--vert);border:none;cursor:pointer}
 .lang-selector button.active{color:#fff;background:var(--vert);border-radius:20px}
 
-/* --- Styles pour le Ciel Étoilé (NOUVEAU) --- */
+/* --- Styles pour le Ciel Étoilé et le Phénix (NOUVEAU / MODIFIÉ) --- */
 #stars-background {
     position: fixed; 
     top: 0;
@@ -36,23 +36,56 @@ button:hover{background:var(--vert);color:var(--noir);transform:scale(1.07)}
     height: 100%;
     z-index: -1; 
     overflow: hidden; 
-    transition: transform 0.2s ease-out; /* Pour l'effet parallaxe fluide */
+    /* La transition pour le mouvement de la souris sera gérée par JS */
 }
 
+/* Styles de chaque étoile */
 .star {
     position: absolute;
     background-color: #fff; 
     border-radius: 50%; 
     opacity: 0; 
-    animation: twinkle 5s infinite alternate; 
+    /* Animation de scintillement ET de mouvement (scroll léger) */
+    animation: twinkle 5s infinite alternate, star-scroll var(--duration) linear infinite;
+    /* --duration sera défini par JS pour chaque étoile */
 }
 
 /* Définition de l'animation de scintillation */
 @keyframes twinkle {
-    0% {
-        opacity: 0.1; 
-    }
-    100% {
-        opacity: 1; 
-    }
+    0% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
+
+/* Animation de défilement léger pour les étoiles */
+@keyframes star-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100vw); } /* Déplace vers la gauche sur toute la largeur de l'écran */
+}
+
+/* Style du Phénix */
+#phoenix {
+    position: absolute;
+    width: 150px; /* Taille du phénix, ajustez si besoin */
+    height: auto;
+    left: 50%; /* Commence au centre horizontalement */
+    top: 50%; /* Commence au centre verticalement */
+    transform: translate(-50%, -50%); /* Centre l'image */
+    opacity: 0.8; /* Légèrement transparent pour un effet "fond" */
+    animation: phoenix-fly 20s linear infinite; /* Animation de vol */
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7)); /* Halo de feu */
+}
+
+/* Animation de vol du Phénix */
+@keyframes phoenix-fly {
+    0% { transform: translate(-150vw, 50vh) scale(0.8) rotate(15deg); opacity: 0; } /* Commence loin à gauche, petite taille, incliné, invisible */
+    20% { opacity: 0.8; } /* Devient visible */
+    50% { transform: translate(0vw, -10vh) scale(1.2) rotate(-5deg); opacity: 1; } /* Passe devant, grande taille, autre inclinaison, pleinement visible */
+    80% { opacity: 0.8; } /* Re-devient légèrement transparent */
+    100% { transform: translate(150vw, 50vh) scale(0.8) rotate(15deg); opacity: 0; } /* Finit loin à droite, petite taille, incliné, invisible */
+}
+
+/* Ajustements pour que le contenu soit au-dessus des étoiles et du phénix */
+.container, header, footer, .lang-selector {
+    position: relative;
+    z-index: 1; /* Assure que ces éléments sont au-dessus de l'arrière-plan */
 }
