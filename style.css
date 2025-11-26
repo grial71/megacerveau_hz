@@ -27,7 +27,7 @@ button:hover{background:var(--vert);color:var(--noir);transform:scale(1.07)}
 .lang-selector button{margin:0 6px;padding:8px 14px;font-size:0.9em;background:transparent;color:var(--vert);border:none;cursor:pointer}
 .lang-selector button.active{color:#fff;background:var(--vert);border-radius:20px}
 
-/* --- Styles pour le Ciel Étoilé et le Phénix (MODIFIÉ pour 3D) --- */
+/* --- Styles pour le Ciel Étoilé 3D --- */
 #stars-background {
     position: fixed; 
     top: 0;
@@ -36,53 +36,9 @@ button:hover{background:var(--vert);color:var(--noir);transform:scale(1.07)}
     height: 100%;
     z-index: -1; 
     overflow: hidden; 
-    /* Three.js va dessiner un canvas ici, nous n'avons pas besoin de transform: translate */
-    /* Les étoiles 2D vont aussi être gérées différemment si nous utilisons Three.js pour toutes les étoiles */
 }
 
-/* Les styles .star et @keyframes twinkle/star-scroll ne seront plus utilisés si Three.js gère les étoiles */
-/* Nous les commentons pour l'instant ou les retirons */
-/*
-.star {
-    position: absolute;
-    background-color: #fff; 
-    border-radius: 50%; 
-    opacity: 0; 
-    animation: twinkle 5s infinite alternate, star-scroll var(--duration) linear infinite;
-}
-@keyframes twinkle {
-    0% { opacity: 0.1; }
-    100% { opacity: 1; }
-}
-@keyframes star-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100vw); } 
-}
-*/
-
-/* Le style du phénix 2D est commenté si nous passons au 3D */
-/*
-#phoenix {
-    position: absolute;
-    width: 150px; 
-    height: auto;
-    left: 50%; 
-    top: 50%; 
-    transform: translate(-50%, -50%); 
-    opacity: 0.8; 
-    animation: phoenix-fly 20s linear infinite; 
-    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7)); 
-}
-@keyframes phoenix-fly {
-    0% { transform: translate(-150vw, 50vh) scale(0.8) rotate(15deg); opacity: 0; } 
-    20% { opacity: 0.8; } 
-    50% { transform: translate(0vw, -10vh) scale(1.2) rotate(-5deg); opacity: 1; } 
-    80% { opacity: 0.8; } 
-    100% { transform: translate(150vw, 50vh) scale(0.8) rotate(15deg); opacity: 0; } 
-}
-*/
-
-/* Assurez-vous que le contenu reste au-dessus */
+/* Assurez-vous que le contenu reste au-dessus du canvas 3D */
 .container, header, footer, .lang-selector {
     position: relative;
     z-index: 1; 
