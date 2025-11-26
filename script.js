@@ -18,7 +18,7 @@ const translations = {
     "Créé par Michel Quinones": "Creado por Michel Quinones",
     "intro_texte_principal": "Dos hernias de disco + artrosis cervical durante años → pruebo todo.<br>Aquí están las frecuencias y videos que realmente me ayudan a diario: dolor, concentración, paz interior.",
     "Comment fonctionnent ces fréquences ?": "¿Cómo funcionan estas frecuencias?",
-    "explication_frequences": "<strong>1. Ondas binaurales</strong> → dos tonos diferentes crean una tercera frecuencia en el cerebro…<br><strong>2. Frecuencias Solfeggio</strong> → 174 Hz (dolor), 285 Hz (regeneración), 528 Hz (amor), etc.<br><strong>3. Schumann 7,83 Hz</strong> → sincronización con la Tierra.<br><br><strong>Importante:</strong> esto no es un tratamiento médico, pero miles de personas (yo incluido) sienten un verdadero alivio.",
+    "explicacion_frequences": "<strong>1. Ondas binaurales</strong> → dos tonos diferentes crean una tercera frecuencia en el cerebro…<br><strong>2. Frecuencias Solfeggio</strong> → 174 Hz (dolor), 285 Hz (regeneración), 528 Hz (amor), etc.<br><strong>3. Schumann 7,83 Hz</strong> → sincronización con la Tierra.<br><br><strong>Importante:</strong> esto no es un tratamiento médico, pero miles de personas (yo incluido) sienten un verdadero alivio.",
     "Ce projet vous change la vie ? Coffee": "¿Este proyecto te cambia la vida? Coffee",
     "Soutenir via PayPal": "Apoyar a través de PayPal",
     "Merci d’envoyer en mode « Amis & famille » (0 frais)": "Gracias por enviar como «Amigos y familiares» (0 cargos)",
@@ -30,7 +30,7 @@ const translations = {
     "Créé par Michel Quinones": "Created by Michel Quinones",
     "intro_texte_principal": "Two herniated discs + cervical osteoarthritis for years → I try everything.<br>Here are the frequencies and videos that truly help me daily: pain, concentration, inner peace.",
     "Comment fonctionnent ces fréquences ?": "How do these frequencies work?",
-    "explication_frequences": "<strong>1. Binaural Beats</strong> → two different tones create a third frequency in the brain…<br><strong>2. Solfeggio Frequencies</strong> → 174 Hz (pain), 285 Hz (regeneration), 528 Hz (love), etc.<br><strong>3. Schumann 7.83 Hz</strong> → synchronization with the Earth.<br><br><strong>Important :</strong> this is not medical treatment, but thousands of people (myself included) feel real relief.",
+    "explicacion_frequences": "<strong>1. Binaural Beats</strong> → two different tones create a third frequency in the brain…<br><strong>2. Solfeggio Frequencies</strong> → 174 Hz (pain), 285 Hz (regeneration), 528 Hz (love), etc.<br><strong>3. Schumann 7.83 Hz</strong> → synchronization with the Earth.<br><br><strong>Important :</strong> this is not medical treatment, but thousands of people (myself included) feel real relief.",
     "Ce projet vous change la vie ? Coffee": "Does this project change your life? Coffee",
   	"Soutenir via PayPal": "Support via PayPal",
   	"Merci d’envoyer en mode « Amis & famille » (0 frais)": "Please send using «Friends & Family» (0 fees)",
@@ -39,10 +39,7 @@ const translations = {
 };
 
 // --- Logique de Traduction ---
-
-// Fonction pour appliquer la traduction et sauvegarder la langue
 window.setLang = function(lang) {
-    // 1. Mise à jour des classes des boutons
     document.querySelectorAll('.lang-selector button').forEach(button => {
         button.classList.remove('active');
         if (button.getAttribute('data-lang') === lang) {
@@ -50,7 +47,6 @@ window.setLang = function(lang) {
         }
     });
 
-    // 2. Application des traductions
     const translationSet = translations[lang];
     document.querySelectorAll('[data-tr]').forEach(element => {
         const key = element.getAttribute('data-tr');
@@ -59,36 +55,30 @@ window.setLang = function(lang) {
         }
     });
 
-    // 3. Sauvegarder la langue dans le stockage local (pour le prochain chargement)
     localStorage.setItem('megabrainLang', lang);
 };
 
 
 // --- Logique d'affichage des vidéos ---
-
 const modal = document.getElementById('video-modal');
 const player = document.getElementById('youtube-player');
 
-// Ouvre la modale et charge la vidéo
 window.openVideo = function(videoElement) {
     const videoId = videoElement.getAttribute('data-video-id');
     if (videoId) {
-        // Crée l'URL d'intégration YouTube avec l'option autoplay=1
         const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&showinfo=0&iv_load_policy=3`;
         player.src = embedUrl;
-        modal.style.display = 'flex'; // Affiche la modale
-        document.body.style.overflow = 'hidden'; // Empêche le défilement en arrière-plan
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     }
 }
 
-// Ferme la modale et arrête la vidéo
 window.closeModal = function() {
-    modal.style.display = 'none'; // Cache la modale
-    player.src = ''; // Réinitialise le src du lecteur pour stopper la lecture
-    document.body.style.overflow = 'auto'; // Rétablit le défilement
+    modal.style.display = 'none';
+    player.src = '';
+    document.body.style.overflow = 'auto';
 }
 
-// Optionnel : Fermer la modale en cliquant en dehors ou avec la touche ESC
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
         closeModal();
@@ -102,36 +92,37 @@ window.addEventListener('keydown', (event) => {
 });
 
 
-// --- Logique du Ciel Étoilé (NOUVEAU) ---
+// --- Logique du Ciel Étoilé et du Phénix (NOUVEAU / MODIFIÉ) ---
 
 function createStarsBackground() {
     const starContainer = document.getElementById('stars-background');
-    const numberOfStars = 150; // Nombre d'étoiles
+    const numberOfStars = 150; 
     
     for (let i = 0; i < numberOfStars; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
         
-        // 1. Taille aléatoire
         const size = Math.random() * 2 + 1; 
         star.style.width = `${size}px`;
         star.style.height = `${size}px`;
         
-        // 2. Position aléatoire
-        star.style.left = `${Math.random() * 100}%`;
+        // Position aléatoire mais sur une plus grande zone pour l'effet de "défilement"
+        star.style.left = `${Math.random() * 200}%`; // Étoiles générées hors écran à droite
         star.style.top = `${Math.random() * 100}%`;
         
-        // 3. Délai et durée d'animation aléatoire
         star.style.animationDelay = `${Math.random() * 5}s`;
-        star.style.animationDuration = `${Math.random() * 3 + 2}s`; 
+        
+        // Durée de l'animation de défilement (plus la durée est courte, plus l'étoile va vite)
+        const scrollDuration = Math.random() * 50 + 20; // Entre 20s et 70s pour des vitesses variées
+        star.style.setProperty('--duration', `${scrollDuration}s`); // Définition de la variable CSS
         
         starContainer.appendChild(star);
     }
 }
 
+// Pour l'effet parallaxe du fond
 const starsBackground = document.getElementById('stars-background');
 
-// Amélioration : Mouvement des Étoiles avec la Souris (Interactivité)
 window.addEventListener('mousemove', (e) => {
     const centerX = window.innerWidth / 2;
     const centerY = window.innerHeight / 2;
@@ -139,8 +130,9 @@ window.addEventListener('mousemove', (e) => {
     const offsetX = (e.clientX - centerX) / centerX;
     const offsetY = (e.clientY - centerY) / centerY;
 
-    const intensity = 5; // Force du mouvement parallaxe
+    const intensity = 10; // Augmenté pour un effet plus visible
     
+    // Applique le déplacement aux étoiles ET au phénix (s'il est dans le conteneur)
     starsBackground.style.transform = `translate(
         ${offsetX * intensity}px, 
         ${offsetY * intensity}px
@@ -149,11 +141,9 @@ window.addEventListener('mousemove', (e) => {
 
 
 // --- Initialisation au chargement de la page ---
-
 document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('megabrainLang') || 'fr'; 
     setLang(savedLang);
     
-    // Appel pour créer le ciel étoilé
     createStarsBackground(); 
 });
