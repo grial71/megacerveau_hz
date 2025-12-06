@@ -1,90 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MEGABRAIN – Hernie & arthrose + étude/concentration + méditation profonde : 174 Hz, 40 Hz, 528 Hz, 963 Hz, Schumann">
-  <title>MEGABRAIN – Douleur · Étude · Méditation</title>
-  <link rel="icon" href="https://files.catbox.moe/5r4i7k.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MEGABRAIN – Fréquences pour la relaxation, la concentration et la méditation.">
+  <title>MEGABRAIN – Relaxation · Concentration · Méditation</title>
+  <link rel="icon" href="https://files.catbox.moe/5r4i7k.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- LANG SELECTOR -->
 <div class="lang-selector">
-  <button onclick="setLang('fr')" data-lang="fr">FR</button>
-  <button onclick="setLang('es')" data-lang="es">ES</button>
-  <button onclick="setLang('en')" data-lang="en">EN</button>
+  <button onclick="setLang('fr')" data-lang="fr">FR</button>
+  <button onclick="setLang('es')" data-lang="es">ES</button>
+  <button onclick="setLang('en')" data-lang="en">EN</button>
 </div>
 
 <header>
-  <h1 data-tr="MEGABRAIN">MEGABRAIN</h1>
-  <nav>
-    <a href="#douleur" data-tr="Douleur">Douleur</a>
-    <a href="#etude"   data-tr="Étude">Étude</a>
-    <a href="#meditation" data-tr="Méditation">Méditation</a>
-    <a href="livres.html" data-tr="Livres">Livres</a>
-  </nav>
+  <h1 data-tr="MEGABRAIN">MEGABRAIN</h1>
+  <nav>
+    <a href="#douleur" data-tr="Douleur">Relaxation</a>
+    <a href="#etude" data-tr="Étude">Concentration</a>
+    <a href="#meditation" data-tr="Méditation">Méditation</a>
+    <a href="livres.html" data-tr="Livres">Livres</a>
+  </nav>
 </header>
 
+<!-- INTRO -->
 <div class="container intro">
-  <h2 data-tr="Créé par Michel Quinones">Créé par Michel Quinones</h2>
-  <p data-tr="intro_texte_principal">
-    Deux hernies discales + arthrose cervicale depuis des années → je teste tout.<br>
-    Voici les fréquences et vidéos qui m’aident vraiment au quotidien : douleur, concentration, paix intérieure.
-  </p>
+  <h2 data-tr="Créé par Michel Quinones">Créé par Michel Quinones</h2>
+  <p data-tr="intro_texte_principal">
+    Sélection de fréquences sonores et de musiques conçues pour favoriser la relaxation, 
+    la concentration et la méditation profonde.  
+  </p>
 </div>
 
+<!-- EXPLICATION -->
 <div class="container intro">
-  <h2 data-tr="Comment fonctionnent ces fréquences ?">Comment fonctionnent ces fréquences ?</h2>
-  <p data-tr="explication_frequences">
-    <strong>1. Ondas binaurales</strong> → deux tons différents créent une troisième fréquence dans le cerveau…<br>
-    <strong>2. Fréquences solfège</strong> → 174 Hz (douleur), 285 Hz (régénération), 528 Hz (amour), etc.<br>
-    <strong>3. Schumann 7,83 Hz</strong> → synchronisation avec la Terre.<br><br>
-    <strong>Important :</strong> ce n’est pas un traitement médical, mais des milliers de personnes (moi compris) ressentent un vrai soulagement.
-  </p>
+  <h2 data-tr="Comment fonctionnent ces fréquences ?">Comment fonctionnent ces fréquences ?</h2>
+  <p data-tr="explication_frequences">
+    <strong>1. Ondes binaurales</strong> → deux tons distincts perçus simultanément créent une fréquence interne.<br>
+    <strong>2. Fréquences solfège</strong> → utilisées pour la relaxation, l’équilibre émotionnel et la clarté mentale.<br>
+    <strong>3. Schumann 7,83 Hz</strong> → fréquence naturelle du champ terrestre, souvent associée à l’harmonie.<br><br>
+    Ces outils sonores sont couramment utilisés pour favoriser le calme, la concentration et le bien-être général.
+  </p>
 </div>
 
+<!-- ================================================= -->
+<!-- SECTION RELAXATION (ancien Douleur) -->
+<!-- ================================================= -->
 <div class="container section" id="douleur">
-  <h2 data-tr="Douleur">Douleur</h2>
-  <p>Ici, tu mettras les vidéos et les fréquences spécifiquement pour soulager la **Douleur** (ex: 174 Hz).</p>
-  
-  <div class="video-item" data-video-id="QgcUT8ofI1w" onclick="openVideo(this)">
-    <h3>1. Soulagement Physique (Longue Durée)</h3>
-    <p>Thérapie par fréquence pour la douleur et la réduction des tensions corporelles.</p>
-  </div>
+  <h2 data-tr="Douleur">Relaxation</h2>
+
+  <div class="video-item" data-video-id="QgcUT8ofI1w" onclick="openVideo(this)">
+    <h3>174 Hz – Relaxation profonde</h3>
+    <p>Fréquence apaisante pour favoriser le relâchement du corps et de l’esprit.</p>
+  </div>
+
+  <div class="video-item" data-video-id="n6PzFQZ5xxE" onclick="openVideo(this)">
+    <h3>285 Hz – Harmonie & équilibre</h3>
+    <p>Fréquence douce soutenant la détente générale.</p>
+  </div>
+
+  <div class="video-item" data-video-id="Q1Uu1B-E5yE" onclick="openVideo(this)">
+    <h3>396 Hz – Libération intérieure</h3>
+    <p>Musique favorisant la réduction des tensions et du stress.</p>
+  </div>
 </div>
 
+<!-- ================================================= -->
+<!-- SECTION CONCENTRATION -->
+<!-- ================================================= -->
 <div class="container section" id="etude">
-  <h2 data-tr="Étude">Étude</h2>
-  <p>Ici, tu mettras les vidéos et les fréquences pour l'**Étude** et la concentration (ex: Ondes Gamma 40 Hz).</p>
-  
-  <div class="video-item" data-video-id="F5Hr5i8GNgc" onclick="openVideo(this)">
-    <h3>1. Concentration Maximale - Ondes Gamma</h3>
-    <p>Améliorez la concentration et la mémoire avec cette fréquence d'étude pour le travail.</p>
-  </div>
+  <h2 data-tr="Étude">Concentration</h2>
+
+  <div class="video-item" data-video-id="F5Hr5i8GNgc" onclick="openVideo(this)">
+    <h3>40 Hz Gamma – Focus mental</h3>
+    <p>Stimulation idéale pour la concentration et la clarté d’esprit.</p>
+  </div>
+
+  <div class="video-item" data-video-id="tZanQxQ3qQI" onclick="openVideo(this)">
+    <h3>Deep Focus – Travail & étude</h3>
+    <p>Musique conçue pour maintenir une attention prolongée.</p>
+  </div>
+
+  <div class="video-item" data-video-id="3_C5uB1P24U" onclick="openVideo(this)">
+    <h3>40 Hz – Performance cognitive</h3>
+    <p>Fréquence gamma soutenant l'organisation mentale et la productivité.</p>
+  </div>
 </div>
 
+<!-- ================================================= -->
+<!-- SECTION MÉDITATION -->
+<!-- ================================================= -->
 <div class="container section" id="meditation">
-  <h2 data-tr="Méditation">Méditation</h2>
-  <p>Ici, tu mettras les vidéos pour la **Méditation** profonde et la relaxation (ex: 528 Hz ou 963 Hz).</p>
-  
-  <div class="video-item" data-video-id="KwfU4YUjhs4" onclick="openVideo(this)">
-    <h3>1. Fréquence Sacrée 963 Hz</h3>
-    <p>Musique pour atteindre un état de paix intérieure et de connexion spirituelle.</p>
-  </div>
+  <h2 data-tr="Méditation">Méditation</h2>
+
+  <div class="video-item" data-video-id="KwfU4YUjhs4" onclick="openVideo(this)">
+    <h3>963 Hz – Méditation profonde</h3>
+    <p>Idéal pour les pratiques de recentrage et d’apaisement.</p>
+  </div>
+
+  <div class="video-item" data-video-id="SLVN1bVvfq8" onclick="openVideo(this)">
+    <h3>528 Hz – Harmonie émotionnelle</h3>
+    <p>Fréquence souvent associée à la sérénité et à la positivité.</p>
+  </div>
+
+  <div class="video-item" data-video-id="6zGQSW1fA64" onclick="openVideo(this)">
+    <h3>Méditation guidée – Respiration</h3>
+    <p>Pratique calme et progressive de relaxation.</p>
+  </div>
 </div>
 
+<!-- DONATE -->
 <div class="container donate">
-  <p data-tr="Ce projet vous change la vie ? Coffee">Ce projet vous change la vie ? Coffee</p>
-  <a href="https://www.paypal.me/michelquinones" target="_blank"><button data-tr="Soutenir via PayPal">Soutenir via PayPal</button></a>
-  <p><small data-tr="Merci d’envoyer en mode « Amis & famille » (0 frais)">Merci d’envoyer en mode « Amis & famille » (0 frais)</small></p>
+  <p data-tr="Ce projet vous change la vie ? Coffee">
+    Soutenir le projet :
+  </p>
+  <a href="https://www.paypal.me/michelquinones" target="_blank">
+    <button data-tr="Soutenir via PayPal">Soutenir via PayPal</button>
+  </a>
+  <p><small data-tr="Merci d’envoyer en mode « Amis & famille » (0 frais)">
+    Merci d’envoyer en mode « Amis & famille ».
+  </small></p>
 </div>
 
-<footer data-tr="MEGABRAIN © 2025 – Créé avec amour par Michel Quinones">MEGABRAIN © 2025 – Créé avec amour par Michel Quinones</footer>
+<footer data-tr="MEGABRAIN © 2025 – Créé avec amour par Michel Quinones">
+  MEGABRAIN © 2025 – Créé par Michel Quinones
+</footer>
 
+<!-- MODAL YOUTUBE -->
 <div class="modal" id="video-modal">
-  <a href="#" class="close-modal" onclick="closeModal()">×</a>
-  <iframe id="youtube-player" width="1100" height="619" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <a href="#" onclick="closeModal()">×</a>
+  <iframe id="youtube-player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
 </div>
 
 <script src="script.js"></script>
