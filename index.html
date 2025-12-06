@@ -8,10 +8,8 @@
   <link rel="icon" href="https://files.catbox.moe/5r4i7k.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- LANG SELECTOR -->
 <div class="lang-selector">
   <button onclick="setLang('fr')" data-lang="fr">FR</button>
   <button onclick="setLang('es')" data-lang="es">ES</button>
@@ -21,38 +19,31 @@
 <header>
   <h1 data-tr="MEGABRAIN">MEGABRAIN</h1>
   <nav>
-    <a href="#douleur" data-tr="Douleur">Relaxation</a>
-    <a href="#etude" data-tr="Étude">Concentration</a>
-    <a href="#meditation" data-tr="Méditation">Méditation</a>
-    <a href="livres.html" data-tr="Livres">Livres</a>
+    <a href="#relax" data-tr="NavRelax">Relaxation</a>
+    <a href="#focus" data-tr="NavFocus">Concentration</a>
+    <a href="#meditation" data-tr="NavMeditation">Méditation</a>
+    <a href="livres.html" data-tr="NavBooks">Livres</a>
   </nav>
 </header>
 
-<!-- INTRO -->
 <div class="container intro">
-  <h2 data-tr="Créé par Michel Quinones">Créé par Michel Quinones</h2>
-  <p data-tr="intro_texte_principal">
-    Sélection de fréquences sonores et de musiques conçues pour favoriser la relaxation, 
-    la concentration et la méditation profonde.  
+  <h2 data-tr="IntroTitle">Créé par Michel Quinones</h2>
+  <p data-tr="IntroText">
+    Sélection de fréquences sonores et de musiques conçues pour favoriser la relaxation,
+    la concentration et la méditation profonde.
   </p>
 </div>
 
-<!-- EXPLICATION -->
 <div class="container intro">
-  <h2 data-tr="Comment fonctionnent ces fréquences ?">Comment fonctionnent ces fréquences ?</h2>
-  <p data-tr="explication_frequences">
-    <strong>1. Ondes binaurales</strong> → deux tons distincts perçus simultanément créent une fréquence interne.<br>
-    <strong>2. Fréquences solfège</strong> → utilisées pour la relaxation, l’équilibre émotionnel et la clarté mentale.<br>
-    <strong>3. Schumann 7,83 Hz</strong> → fréquence naturelle du champ terrestre, souvent associée à l’harmonie.<br><br>
-    Ces outils sonores sont couramment utilisés pour favoriser le calme, la concentration et le bien-être général.
+  <h2 data-tr="ExplainTitle">Comment fonctionnent ces fréquences ?</h2>
+  <p data-tr="ExplainText">
+    <!-- Texte remplacé par JS -->
   </p>
 </div>
 
-<!-- ================================================= -->
-<!-- SECTION RELAXATION (ancien Douleur) -->
-<!-- ================================================= -->
-<div class="container section" id="douleur">
-  <h2 data-tr="Douleur">Relaxation</h2>
+<!-- ============ RELAXATION ============ -->
+<div class="container section" id="relax">
+  <h2 data-tr="NavRelax">Relaxation</h2>
 
   <div class="video-item" data-video-id="QgcUT8ofI1w" onclick="openVideo(this)">
     <h3>174 Hz – Relaxation profonde</h3>
@@ -60,7 +51,7 @@
   </div>
 
   <div class="video-item" data-video-id="n6PzFQZ5xxE" onclick="openVideo(this)">
-    <h3>285 Hz – Harmonie & équilibre</h3>
+    <h3>285 Hz – Harmonie &amp; équilibre</h3>
     <p>Fréquence douce soutenant la détente générale.</p>
   </div>
 
@@ -70,11 +61,9 @@
   </div>
 </div>
 
-<!-- ================================================= -->
-<!-- SECTION CONCENTRATION -->
-<!-- ================================================= -->
-<div class="container section" id="etude">
-  <h2 data-tr="Étude">Concentration</h2>
+<!-- ============ CONCENTRATION ============ -->
+<div class="container section" id="focus">
+  <h2 data-tr="NavFocus">Concentration</h2>
 
   <div class="video-item" data-video-id="F5Hr5i8GNgc" onclick="openVideo(this)">
     <h3>40 Hz Gamma – Focus mental</h3>
@@ -82,64 +71,20 @@
   </div>
 
   <div class="video-item" data-video-id="tZanQxQ3qQI" onclick="openVideo(this)">
-    <h3>Deep Focus – Travail & étude</h3>
+    <h3>Deep Focus – Travail &amp; étude</h3>
     <p>Musique conçue pour maintenir une attention prolongée.</p>
   </div>
 
   <div class="video-item" data-video-id="3_C5uB1P24U" onclick="openVideo(this)">
     <h3>40 Hz – Performance cognitive</h3>
-    <p>Fréquence gamma soutenant l'organisation mentale et la productivité.</p>
+    <p>Fréquence gamma soutenant l’organisation mentale et la productivité.</p>
   </div>
 </div>
 
-<!-- ================================================= -->
-<!-- SECTION MÉDITATION -->
-<!-- ================================================= -->
+<!-- ============ MÉDITATION ============ -->
 <div class="container section" id="meditation">
-  <h2 data-tr="Méditation">Méditation</h2>
+  <h2 data-tr="NavMeditation">Méditation</h2>
 
   <div class="video-item" data-video-id="KwfU4YUjhs4" onclick="openVideo(this)">
     <h3>963 Hz – Méditation profonde</h3>
     <p>Idéal pour les pratiques de recentrage et d’apaisement.</p>
-  </div>
-
-  <div class="video-item" data-video-id="SLVN1bVvfq8" onclick="openVideo(this)">
-    <h3>528 Hz – Harmonie émotionnelle</h3>
-    <p>Fréquence souvent associée à la sérénité et à la positivité.</p>
-  </div>
-
-  <div class="video-item" data-video-id="6zGQSW1fA64" onclick="openVideo(this)">
-    <h3>Méditation guidée – Respiration</h3>
-    <p>Pratique calme et progressive de relaxation.</p>
-  </div>
-</div>
-
-<!-- DONATE -->
-<div class="container donate">
-  <p data-tr="Ce projet vous change la vie ? Coffee">
-    Soutenir le projet :
-  </p>
-  <a href="https://www.paypal.me/michelquinones" target="_blank">
-    <button data-tr="Soutenir via PayPal">Soutenir via PayPal</button>
-  </a>
-  <p><small data-tr="Merci d’envoyer en mode « Amis & famille » (0 frais)">
-    Merci d’envoyer en mode « Amis & famille ».
-  </small></p>
-</div>
-
-<footer data-tr="MEGABRAIN © 2025 – Créé avec amour par Michel Quinones">
-  MEGABRAIN © 2025 – Créé par Michel Quinones
-</footer>
-
-<!-- MODAL YOUTUBE -->
-<div class="modal" id="video-modal">
-  <a href="#" onclick="closeModal()">×</a>
-  <iframe id="youtube-player" frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-  </iframe>
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
