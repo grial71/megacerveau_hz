@@ -1,40 +1,95 @@
+// ==========================
+// TRADUCTIONS (FR / ES / EN)
+// ==========================
 const translations = {
   fr: {
-    "MEGABRAIN": "MEGABRAIN",
-    "Douleur": "Douleur", "Étude": "Étude", "Méditation": "Méditation", "Livres": "Livres",
-    "Créé par Michel Quinones": "Créé par Michel Quinones",
-    "intro_texte_principal": "Deux hernies discales + arthrose cervicale depuis des années → je teste tout.<br>Voici les fréquences et vidéos qui m’aident vraiment au quotidien : douleur, concentration, paix intérieure.",
-    "Comment fonctionnent ces fréquences ?": "Comment fonctionnent ces fréquences ?",
-    "explication_frequences": "<strong>1. Ondas binaurales</strong> → deux tons différents créent une troisième fréquence dans le cerveau…<br><strong>2. Fréquences solfège</strong> → 174 Hz (douleur), 285 Hz (régénération), 528 Hz (amour), etc.<br><strong>3. Schumann 7,83 Hz</strong> → synchronisation avec la Terre.<br><br><strong>Important :</strong> ce n’est pas un traitement médical, mais des milliers de personnes (moi compris) ressentent un vrai soulagement.",
-    "Ce projet vous change la vie ? Coffee": "Ce projet vous change la vie ? Coffee",
-    "Soutenir via PayPal": "Soutenir via PayPal",
-    "Merci d’envoyer en mode « Amis & famille » (0 frais)": "Merci d’envoyer en mode « Amis & famille » (0 frais)",
-    "MEGABRAIN © 2025 – Créé avec amour par Michel Quinones": "MEGABRAIN © 2025 – Créé avec amour par Michel Quinones"
+    MEGABRAIN: "MEGABRAIN",
+
+    NavRelax: "Relaxation",
+    NavFocus: "Concentration",
+    NavMeditation: "Méditation",
+    NavBooks: "Livres",
+
+    IntroTitle: "Créé par Michel Quinones",
+    IntroText: "Sélection de fréquences sonores et de musiques conçues pour favoriser la relaxation, la concentration et la méditation profonde.",
+
+    ExplainTitle: "Comment fonctionnent ces fréquences ?",
+    ExplainText:
+      "<strong>1. Ondes binaurales</strong> → deux tons distincts perçus simultanément créent une fréquence interne.<br>" +
+      "<strong>2. Fréquences solfège</strong> → utilisées pour la relaxation, l’équilibre émotionnel et la clarté mentale.<br>" +
+      "<strong>3. Schumann 7,83 Hz</strong> → fréquence naturelle du champ terrestre, souvent associée à l’harmonie.<br><br>" +
+      "Ces outils sonores sont couramment utilisés pour favoriser le calme, la concentration et le bien-être général.",
+
+    DonateTitle: "Soutenir le projet :",
+    DonateButton: "Soutenir via PayPal",
+    DonateNote: "Merci d’envoyer en mode « Amis & famille ».",
+
+    FooterText: "MEGABRAIN © 2025 – Créé par Michel Quinones",
+
+    BooksIntroTitle: "Ma collection de livres",
+    BooksIntroText: "Sélection de livres personnels. Cliquez sur une couverture pour voir la fiche détaillée."
   },
 
   es: {
-    "MEGABRAIN": "MEGABRAIN",
-    "Douleur": "Dolor", "Étude": "Estudio", "Méditation": "Meditación", "Livres": "Libros",
-    "Créé par Michel Quinones": "Creado por Michel Quinones",
-    "intro_texte_principal": "Dos hernias de disco + artrosis cervical durante años → pruebo todo.<br>Aquí están las frecuencias y videos que realmente me ayudan a diario: dolor, concentración, paz interior.",
-    "Comment fonctionnent ces fréquences ?": "¿Cómo funcionan estas frecuencias?",
-    "explication_frequences": "<strong>1. Ondas binaurales</strong> → dos tonos diferentes crean una tercera frecuencia en el cerebro…<br><strong>2. Frecuencias Solfeggio</strong> → 174 Hz (dolor), 285 Hz (regeneración), 528 Hz (amor), etc.<br><strong>3. Schumann 7,83 Hz</strong> → sincronización con la Tierra.<br><br><strong>Importante:</strong> esto no es un tratamiento médico, pero miles de personas (yo incluido) sienten un verdadero alivio.",
-    "Ce projet vous change la vie ? Coffee": "¿Este proyecto te cambia la vida? Coffee",
-    "Soutenir via PayPal": "Apoyar a través de PayPal",
-    "Merci d’envoyer en mode « Amis & famille » (0 frais)": "Gracias por enviar como «Amigos y familiares» (sin cargos)",
-    "MEGABRAIN © 2025 – Créé avec amour par Michel Quinones": "MEGABRAIN © 2025 – Creado con amor por Michel Quinones"
+    MEGABRAIN: "MEGABRAIN",
+
+    NavRelax: "Relajación",
+    NavFocus: "Concentración",
+    NavMeditation: "Meditación",
+    NavBooks: "Libros",
+
+    IntroTitle: "Creado por Michel Quinones",
+    IntroText: "Selección de frecuencias de sonido y música pensadas para favorecer la relajación, la concentración y la meditación profunda.",
+
+    ExplainTitle: "¿Cómo funcionan estas frecuencias?",
+    ExplainText:
+      "<strong>1. Ondas binaurales</strong> → dos tonos diferentes percibidos al mismo tiempo generan una frecuencia interna.<br>" +
+      "<strong>2. Frecuencias Solfeggio</strong> → utilizadas para la relajación, el equilibrio emocional y la claridad mental.<br>" +
+      "<strong>3. Schumann 7,83 Hz</strong> → frecuencia natural del campo terrestre, asociada a la armonía.<br><br>" +
+      "Estas herramientas sonoras se usan a menudo para promover la calma, la concentración y el bienestar general.",
+
+    DonateTitle: "Apoyar el proyecto:",
+    DonateButton: "Apoyar vía PayPal",
+    DonateNote: "Gracias por enviar en modo «Amigos y familiares».",
+
+    FooterText: "MEGABRAIN © 2025 – Creado por Michel Quinones",
+
+    BooksIntroTitle: "Mi colección de libros",
+    BooksIntroText: "Selección de libros personales. Haz clic en una portada para ver la ficha detallada."
   },
 
   en: {
-    "MEGABRAIN": "MEGABRAIN",
-    "Douleur": "Pain", "Étude": "Study", "Méditation": "Meditation", "Livres": "Books",
-    "Créé par Michel Quinones": "Created by Michel Quinones",
-    "intro_texte_principal": "Two herniated discs + cervical osteoarthritis for years → I try everything.<br>Here are the frequencies and videos that truly help me daily: pain, concentration, inner peace.",
-    "Comment fonctionnent ces fréquences ?": "How do these frequencies work?",
-    "explication_frequences": "<strong>1. Binaural Beats</strong> → two different tones create a third frequency in the brain…<br><strong>2. Solfeggio Frequencies</strong> → 174 Hz (pain), 285 Hz (regeneration), 528 Hz (love), etc.<br><strong>3. Schumann 7.83 Hz</strong> → synchronization with the Earth.<br><br><strong>Important :</strong> this is not medical treatment, but thousands of people (myself included) feel real relief.",
-    "Ce projet vous change la vie ? Coffee": "Does this project change your life? Coffee",
-    "Soutenir via PayPal": "Support via PayPal",
-    "Merci d’envoyer en mode « Amis & famille » (0 frais)": "Please send using «Friends & Family» (no fees)",
-    "MEGABRAIN © 2025 – Créé avec amour par Michel Quinones": "MEGABRAIN © 2025 – Created with love by Michel Quinones"
+    MEGABRAIN: "MEGABRAIN",
+
+    NavRelax: "Relaxation",
+    NavFocus: "Focus",
+    NavMeditation: "Meditation",
+    NavBooks: "Books",
+
+    IntroTitle: "Created by Michel Quinones",
+    IntroText: "Selection of sound frequencies and music designed to support relaxation, focus and deep meditation.",
+
+    ExplainTitle: "How do these frequencies work?",
+    ExplainText:
+      "<strong>1. Binaural beats</strong> → two distinct tones perceived at the same time create an internal frequency.<br>" +
+      "<strong>2. Solfeggio frequencies</strong> → often used for relaxation, emotional balance and mental clarity.<br>" +
+      "<strong>3. Schumann 7.83 Hz</strong> → natural frequency of the Earth’s field, associated with harmony.<br><br>" +
+      "These sound tools are commonly used to promote calm, concentration and overall well-being.",
+
+    DonateTitle: "Support the project:",
+    DonateButton: "Support via PayPal",
+    DonateNote: "Please send using «Friends & Family».",
+
+    FooterText: "MEGABRAIN © 2025 – Created by Michel Quinones",
+
+    BooksIntroTitle: "My book collection",
+    BooksIntroText: "Selection of personal books. Click a cover to open the detailed page."
   }
 };
+
+// ==========================
+// LOGIQUE DE TRADUCTION
+// ==========================
+window.setLang = function (lang) {
+  // boutons actifs
+  document.querySelectorAll(".lang-selector button").f
