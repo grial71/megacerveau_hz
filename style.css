@@ -1,91 +1,284 @@
-/* ======================== */
-/*      SECTION LIVRES      */
-/* ======================== */
+:root{
+    --vert:#66ff99;
+    --noir:#0b0c10;
+    --gris:#1f2833;
+}
+
+/* --- FOND FIXE AVEC L'IMAGE DU PHÉNIX --- */
+body{
+    margin:0;
+    font-family:'Segoe UI',Arial,sans-serif;
+    color:var(--vert);
+    text-align:center;
+    padding:20px;
+    line-height:1.6;
+
+    background-color:var(--noir);
+    background-image:url('lampe-avec-design-futuriste-fantastique.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center center;
+}
+
+/* -------------------------------------- */
+
+header{
+    background:var(--gris);
+    padding:35px;
+    border-bottom:5px solid var(--vert);
+    position:relative;
+    overflow:hidden;
+}
+header::before{
+    content:"Brain";
+    font-size:6em;
+    position:absolute;
+    top:10px;
+    right:20px;
+    opacity:0.1;
+    animation:pulse 6s infinite;
+}
+@keyframes pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.2)}
+}
+
+h1{
+    font-size:3.8em;
+    margin:0;
+    text-shadow:0 0 25px #66ff9940;
+}
+nav a{
+    color:var(--vert);
+    margin:0 20px;
+    font-weight:bold;
+    text-decoration:none;
+    padding:12px 24px;
+    border-radius:10px;
+    transition:.3s;
+}
+nav a:hover{
+    background:#66ff9930;
+}
+
+button{
+    background:var(--gris);
+    color:var(--vert);
+    border:2px solid var(--vert);
+    padding:16px 32px;
+    margin:12px;
+    font-size:1.25em;
+    border-radius:14px;
+    cursor:pointer;
+    transition:.4s;
+}
+button:hover{
+    background:var(--vert);
+    color:var(--noir);
+    transform:scale(1.07);
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:25px;
+}
+
+.section{
+    margin:70px 0;
+}
+
+.section h2{
+    font-size:2.2em;
+    margin-bottom:30px;
+    color:#66ff99;
+    text-shadow:0 0 15px #66ff9960;
+}
+
+.video-item{
+    background:var(--gris);
+    padding:22px;
+    margin:18px auto;
+    max-width:750px;
+    border-radius:14px;
+    cursor:pointer;
+    transition:.4s;
+    border-left:6px solid var(--vert);
+    box-shadow:0 0 20px #0006;
+}
+.video-item:hover{
+    background:#66ff9925;
+    transform:translateY(-6px);
+    box-shadow:0 10px 30px #66ff9930;
+}
+
+/* ------------------- */
+/* MODALE YOUTUBE */
+/* ------------------- */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.97);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+.modal a{
+    position:absolute;
+    top:20px;
+    right:20px;
+    color:#fff;
+    font-size:3em;
+    text-decoration:none;
+}
+.modal iframe{
+    width:92%;
+    max-width:850px;
+    height:60vh;
+    border:4px solid var(--vert);
+    border-radius:18px;
+}
+
+/* DONATE */
+.donate a button{
+    background:#009cde;
+    border:none;
+    color:white;
+    padding:20px 50px;
+    font-size:1.4em;
+    border-radius:14px;
+}
+.donate p small{
+    color:#aaa;
+    font-size:.9em;
+}
+
+/* INTRO */
+.intro{
+    background:linear-gradient(135deg,#1a1a1a,#0f0f0f);
+    padding:35px;
+    border-radius:16px;
+    margin:40px auto;
+    max-width:1000px;
+    border:1px solid #66ff9960;
+    box-shadow:0 0 30px #66ff991a;
+}
+
+/* LANG SELECTOR */
+.lang-selector{
+    position:fixed;
+    top:15px;
+    right:15px;
+    z-index:1000;
+    background:#0008;
+    padding:8px 12px;
+    border-radius:30px;
+    border:2px solid var(--vert);
+}
+.lang-selector button{
+    margin:0 6px;
+    padding:8px 14px;
+    font-size:.9em;
+    background:transparent;
+    color:var(--vert);
+    border:none;
+    cursor:pointer;
+}
+.lang-selector button.active{
+    color:#fff;
+    background:var(--vert);
+    border-radius:20px;
+}
+
+/* ========================= */
+/* SECTION LIVRES (NOUVEAU) */
+/* ========================= */
 
 .grid-livres{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:40px;
 }
 
 .livre-card{
-    background: var(--gris);
-    border-radius: 16px;
-    padding: 18px;
-    text-decoration: none;
-    color: var(--vert);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: .35s;
-    border-left: 6px solid var(--vert);
-    box-shadow: 0 0 20px #0007;
+    background:var(--gris);
+    border-radius:16px;
+    padding:18px;
+    text-decoration:none;
+    color:var(--vert);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transition:.35s;
+    border-left:6px solid var(--vert);
+    box-shadow:0 0 20px #0007;
+}
+.livre-card:hover{
+    background:#66ff9930;
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:0 12px 30px #66ff9930;
 }
 
 .livre-card img{
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #0009;
-    margin-bottom: 12px;
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:12px;
+    box-shadow:0 0 15px #0009;
+    margin-bottom:12px;
 }
 
 .livre-card h3{
-    margin: 8px 0 4px;
-    font-size: 1.2em;
-    text-shadow: 0 0 12px #66ff9950;
+    margin:8px 0 4px;
+    font-size:1.2em;
+    text-shadow:0 0 12px #66ff9950;
 }
-
 .livre-card p{
-    margin: 0;
-    font-size: 0.95em;
-    opacity: 0.85;
+    margin:0;
+    font-size:.95em;
+    opacity:.85;
 }
 
-.livre-card:hover{
-    background: #66ff9930;
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 12px 30px #66ff9930;
-}
-
-/* Page individuelle d’un livre */
+/* PAGE INDIVIDUELLE LIVRE */
 .page-livre{
-    background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
-    padding: 35px;
-    border-radius: 18px;
-    max-width: 850px;
-    margin: 60px auto;
-    border: 1px solid #66ff9960;
-    box-shadow: 0 0 30px #66ff991a;
-    color: var(--vert);
+    background:linear-gradient(135deg,#1a1a1a,#0f0f0f);
+    padding:35px;
+    border-radius:18px;
+    max-width:850px;
+    margin:60px auto;
+    border:1px solid #66ff9960;
+    box-shadow:0 0 30px #66ff991a;
+    color:var(--vert);
 }
-
 .page-livre img{
-    width: 100%;
-    max-height: 460px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    box-shadow: 0 0 25px #0009;
+    width:100%;
+    max-height:460px;
+    object-fit:cover;
+    border-radius:16px;
+    margin-bottom:25px;
+    box-shadow:0 0 25px #0009;
 }
 
-.back-btn{
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 26px;
-    background: var(--gris);
-    border: 2px solid var(--vert);
-    border-radius: 12px;
-    color: var(--vert);
-    text-decoration: none;
-    transition: .3s;
-    font-size: 1.1em;
+.bouton-retour{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 26px;
+    background:var(--gris);
+    border:2px solid var(--vert);
+    border-radius:12px;
+    color:var(--vert);
+    text-decoration:none;
+    font-size:1.1em;
+    transition:.3s;
 }
-
-.back-btn:hover{
-    background: var(--vert);
-    color: var(--noir);
-    transform: scale(1.06);
+.bouton-retour:hover{
+    background:var(--vert);
+    color:var(--noir);
+    transform:scale(1.06);
 }
