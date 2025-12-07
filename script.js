@@ -168,3 +168,25 @@ document.addEventListener("click", (e) => {
     window.closeVideo();
   }
 });
+
+// ====== Musique de fond ======
+const bgMusic = document.getElementById("bg-music");
+const musicBtn = document.getElementById("music-control");
+const icon = document.getElementById("music-icon");
+
+let musicEnabled = false;
+
+musicBtn.addEventListener("click", () => {
+    if (!musicEnabled) {
+        bgMusic.volume = 0.3;
+        bgMusic.play().catch(e => console.log("Lecture bloquée:", e));
+        icon.textContent = "🔊";
+        musicEnabled = true;
+    } else {
+        bgMusic.pause();
+        icon.textContent = "🔇";
+        musicEnabled = false;
+    }
+});
+
+
