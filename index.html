@@ -11,18 +11,24 @@
 
 <body>
 
-<!-- Musique d'ambiance -->
+<!-- 🌌 Étoiles animées -->
+<div class="stars"></div>
+
+<!-- 🎵 Musique d’ambiance -->
 <audio id="bg-music" src="musique/mystere.mp3" loop></audio>
 
+<!-- 🎵 Bouton musique -->
 <div id="music-control">
   <span id="music-icon">🔊</span>
 </div>
 
+<!-- 🌐 Boutons TikTok + Telegram -->
+<div id="social-buttons">
+  <a href="https://www.tiktok.com/@mickael8881" target="_blank" class="social-btn tiktok">🎵 TikTok</a>
+  <a href="https://t.me/8334956769" target="_blank" class="social-btn telegram">✉ Telegram</a>
+</div>
 
-<!-- ⭐ Étoiles animées si activées dans le CSS -->
-<div class="stars"></div>
-
-<!-- 🎌 Sélecteur de langue -->
+<!-- 🌍 Sélecteur de langue -->
 <div class="lang-selector">
   <button onclick="setLang('fr')" data-lang="fr">FR</button>
   <button onclick="setLang('es')" data-lang="es">ES</button>
@@ -51,12 +57,12 @@
 <!-- EXPLICATION -->
 <div class="container intro">
   <h2 data-tr="ExplainTitle">Comment fonctionnent ces fréquences ?</h2>
-  <p data-tr="ExplainText">
-    <!-- Le script remplace ce texte automatiquement -->
-  </p>
+  <p data-tr="ExplainText"></p>
 </div>
 
-<!-- ============ RELAXATION ============ -->
+<!-- =============================== -->
+<!--           RELAXATION            -->
+<!-- =============================== -->
 <div class="container section" id="relax">
   <h2 data-tr="NavRelax">Relaxation</h2>
 
@@ -66,7 +72,7 @@
   </div>
 
   <div class="video-item" data-video-id="n6PzFQZ5xxE" onclick="openVideo(this)">
-    <h3>285 Hz – Harmonie &amp; équilibre</h3>
+    <h3>285 Hz – Harmonie & équilibre</h3>
     <p>Fréquence douce soutenant la détente générale.</p>
   </div>
 
@@ -76,7 +82,9 @@
   </div>
 </div>
 
-<!-- ============ CONCENTRATION ============ -->
+<!-- =============================== -->
+<!--          CONCENTRATION          -->
+<!-- =============================== -->
 <div class="container section" id="focus">
   <h2 data-tr="NavFocus">Concentration</h2>
 
@@ -86,7 +94,7 @@
   </div>
 
   <div class="video-item" data-video-id="tZanQxQ3qQI" onclick="openVideo(this)">
-    <h3>Deep Focus – Travail &amp; étude</h3>
+    <h3>Deep Focus – Travail & étude</h3>
     <p>Musique conçue pour maintenir une attention prolongée.</p>
   </div>
 
@@ -96,7 +104,9 @@
   </div>
 </div>
 
-<!-- ============ MÉDITATION ============ -->
+<!-- =============================== -->
+<!--            MÉDITATION           -->
+<!-- =============================== -->
 <div class="container section" id="meditation">
   <h2 data-tr="NavMeditation">Méditation</h2>
 
@@ -106,7 +116,7 @@
   </div>
 </div>
 
-<!-- 🌙 DON -->
+<!-- DON -->
 <div class="container donate">
   <h3 data-tr="DonateTitle">Soutenir le projet :</h3>
   <a href="https://www.paypal.me/michelquinones" target="_blank">
@@ -119,7 +129,7 @@
   MEGABRAIN © 2025 – Créé par Michel Quinones
 </footer>
 
-<!-- 🎥 MODALE YOUTUBE -->
+<!-- MODALE VIDEO -->
 <div id="videoModal" class="modal">
   <a href="#" onclick="closeVideo(event)">✕</a>
   <iframe
@@ -133,4 +143,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
