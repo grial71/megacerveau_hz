@@ -359,3 +359,113 @@ button:hover{
     color:var(--noir);
     transform:scale(1.1);
 }
+
+/* ============================= */
+/*      CHATBOT PEDAGOGIQUE      */
+/* ============================= */
+
+#chatbot-toggle{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#1f2833cc;
+    border:2px solid var(--vert);
+    color:var(--vert);
+    padding:10px 16px;
+    border-radius:999px;
+    cursor:pointer;
+    z-index:999999;
+    font-size:1em;
+    font-weight:bold;
+    box-shadow:0 0 15px #66ff9955;
+    transition:0.3s;
+}
+#chatbot-toggle:hover{
+    background:var(--vert);
+    color:var(--noir);
+    transform:scale(1.05);
+}
+
+#chatbot-window{
+    position:fixed;
+    bottom:80px;
+    left:20px;
+    width:320px;
+    max-width:80vw;
+    background:#0b0c10f0;
+    border:2px solid var(--vert);
+    border-radius:18px;
+    box-shadow:0 0 25px #000;
+    display:none;
+    flex-direction:column;
+    z-index:999999;
+    overflow:hidden;
+}
+
+#chatbot-header{
+    background:var(--gris);
+    padding:10px 12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:bold;
+    border-bottom:1px solid #66ff9944;
+}
+#chatbot-header span{
+    font-size:0.95em;
+}
+#chatbot-header button{
+    background:transparent;
+    border:none;
+    color:var(--vert);
+    font-size:1.2em;
+    cursor:pointer;
+    padding:0 4px;
+}
+
+#chatbot-messages{
+    max-height:260px;
+    min-height:140px;
+    padding:10px;
+    overflow-y:auto;
+    font-size:0.9em;
+    text-align:left;
+}
+
+/* bulles */
+.chat-msg{
+    margin:6px 0;
+    line-height:1.4;
+}
+.chat-msg.bot{
+    color:#e0fff0;
+}
+.chat-msg.user{
+    text-align:right;
+    color:#b0ffcf;
+}
+
+/* zone de boutons rapides */
+#chatbot-quick{
+    padding:8px;
+    border-top:1px solid #66ff9944;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    justify-content:center;
+}
+
+.chat-quick-btn{
+    background:#1f2833;
+    color:var(--vert);
+    border:1px solid #66ff99aa;
+    border-radius:999px;
+    padding:4px 10px;
+    font-size:0.8em;
+    cursor:pointer;
+    transition:0.2s;
+}
+.chat-quick-btn:hover{
+    background:var(--vert);
+    color:var(--noir);
+}
