@@ -365,3 +365,40 @@ body.livres-page .livre-card img{
     text-decoration:none;
     font-size:1.2em;
 }
+
+#gofund-container {
+    margin-top: 40px;
+    padding: 25px;
+    background: #1a1a1a99;
+    border: 1px solid var(--vert);
+    border-radius: 16px;
+    box-shadow: 0 0 25px #66ff9933;
+}
+
+.gofund-text {
+    font-size: 1.1em;
+    color: var(--vert);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.gofund-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #00c47a;
+    color: #0b0c10;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: .3s;
+    box-shadow: 0 0 15px #00c47a55;
+}
+
+.gofund-btn:hover {
+    background: #66ff99;
+    transform: scale(1.05);
+    color: #0b0c10;
+}
+
+
