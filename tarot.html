@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarot interactif – MegaBrian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="tarot-page">
+
+  <div class="container tarot-container">
+
+    <h1>🔮 Tarot interactif</h1>
+
+    <div class="tarot-back">
+  <a href="index.html" class="back-link">
+    ⬅ Retour à l’accueil
+  </a>
+</div>
+
+
+    <p class="tarot-intro">
+      Cet outil est proposé à titre de réflexion personnelle et symbolique.<br>
+      Il ne remplace ni un avis médical, ni juridique, ni psychologique.
+    </p>
+
+    <p class="tarot-warning">
+      ⚠️ Attention aux arnaques :  
+      aucun avenir n’est figé, aucune promesse n’est faite ici.
+    </p>
+
+    <button id="startTarot" class="tarot-btn">
+      Tirer les cartes
+    </button>
+
+    <div id="tarotResult" class="tarot-result">
+      <!-- Les cartes apparaîtront ici -->
+    </div>
+
+    <div class="tarot-donation">
+      <p>💛 Si cet outil t’aide, tu peux soutenir le projet :</p>
+      <a href="https://www.paypal.me/michelquinones" target="_blank">PayPal</a> |
+      <a href="https://gofund.me/53203161b" target="_blank">GoFundMe</a>
+    </div>
+
+    <p class="tarot-footer">
+      Les questions ne sont pas enregistrées.  
+      Les données sont supprimées automatiquement.
+    </p>
+
+  </div>
+
+  <!-- JS -->
+  <script src="tarot.js"></script>
+</body>
+</html>
