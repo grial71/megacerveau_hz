@@ -501,4 +501,24 @@ footer{
   transform: translateX(-3px);
 }
 
+.language-switch {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.language-switch button {
+  margin: 0 6px;
+  padding: 6px 14px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 14px;
+}
+
+.language-switch button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
 
