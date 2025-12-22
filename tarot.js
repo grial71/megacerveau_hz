@@ -1,69 +1,76 @@
-// 🔮 Tarot interactif – MegaBrian
-// Usage symbolique, non prédictif, non médical
+let currentLang = "fr";
+
+const texts = {
+  fr: {
+    title: "🔮 Tarot interactif",
+    intro: "Outil de réflexion personnelle et symbolique.",
+    warning: "⚠️ Attention aux arnaques : aucune promesse, aucun avenir figé.",
+    button: "Tirer les cartes",
+    note: "Interprétation symbolique uniquement. Prends ce qui résonne.",
+  },
+  es: {
+    title: "🔮 Tarot interactivo",
+    intro: "Herramienta de reflexión personal y simbólica.",
+    warning: "⚠️ Atención a las estafas: sin promesas, nada está escrito.",
+    button: "Sacar cartas",
+    note: "Interpretación simbólica. Toma lo que resuene contigo.",
+  },
+  en: {
+    title: "🔮 Interactive Tarot",
+    intro: "Personal and symbolic reflection tool.",
+    warning: "⚠️ Beware of scams: no promises, nothing is fixed.",
+    button: "Draw cards",
+    note: "Symbolic interpretation only. Take what resonates.",
+  }
+};
 
 const tarotCards = [
   {
-    name: "Le Mat",
-    meaning: "Nouveau départ, liberté, ouverture. Avancer sans peur, mais avec conscience."
+    fr: { name: "Le Mat", meaning: "Nouveau départ, liberté." },
+    es: { name: "El Loco", meaning: "Nuevo comienzo, libertad." },
+    en: { name: "The Fool", meaning: "New beginnings, freedom." }
   },
   {
-    name: "La Papesse",
-    meaning: "Intuition, réflexion, écoute intérieure. Prendre le temps avant d’agir."
+    fr: { name: "La Force", meaning: "Courage calme, maîtrise." },
+    es: { name: "La Fuerza", meaning: "Fuerza interior y calma." },
+    en: { name: "Strength", meaning: "Inner strength and calm." }
   },
   {
-    name: "L’Impératrice",
-    meaning: "Créativité, expression, relation aux autres. Faire confiance à ce qui grandit."
-  },
-  {
-    name: "L’Empereur",
-    meaning: "Structure, responsabilité, stabilité. Poser des bases solides."
-  },
-  {
-    name: "Le Pape",
-    meaning: "Transmission, valeurs, guidance morale. Chercher le sens plutôt que la promesse."
-  },
-  {
-    name: "L’Amoureux",
-    meaning: "Choix, engagement, cohérence entre le cœur et la raison."
-  },
-  {
-    name: "La Force",
-    meaning: "Maîtrise de soi, courage calme, patience face aux tensions."
-  },
-  {
-    name: "L’Hermite",
-    meaning: "Introspection, recul, sagesse acquise avec le temps."
-  },
-  {
-    name: "La Roue de Fortune",
-    meaning: "Changement, mouvement, cycles naturels. Rien n’est figé."
-  },
-  {
-    name: "Le Soleil",
-    meaning: "Clarté, confiance, énergie positive. Avancer dans la transparence."
+    fr: { name: "Le Soleil", meaning: "Clarté, énergie positive." },
+    es: { name: "El Sol", meaning: "Claridad y energía positiva." },
+    en: { name: "The Sun", meaning: "Clarity and positive energy." }
   }
 ];
 
-const button = document.getElementById("startTarot");
 const resultBox = document.getElementById("tarotResult");
+const button = document.getElementById("startTarot");
+
+function updateTexts() {
+  document.querySelector("h1").textContent = texts[currentLang].title;
+  document.querySelector(".tarot-intro").textContent = texts[currentLang].intro;
+  document.querySelector(".tarot-warning").textContent = texts[currentLang].warning;
+  button.textContent = texts[currentLang].button;
+}
+
+document.querySelectorAll(".language-switch button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    currentLang = btn.dataset.lang;
+    updateTexts();
+    resultBox.innerHTML = "";
+  });
+});
 
 button.addEventListener("click", () => {
   resultBox.innerHTML = "";
+  const card = tarotCards[Math.floor(Math.random() * tarotCards.length)][currentLang];
 
-  const randomIndex = Math.floor(Math.random() * tarotCards.length);
-  const card = tarotCards[randomIndex];
-
-  const cardElement = document.createElement("div");
-  cardElement.className = "tarot-card";
-
-  cardElement.innerHTML = `
-    <h2>${card.name}</h2>
-    <p>${card.meaning}</p>
-    <p class="tarot-note">
-      🔎 Interprétation symbolique uniquement.  
-      Prends ce qui résonne, laisse le reste.
-    </p>
+  resultBox.innerHTML = `
+    <div class="tarot-card">
+      <h2>${card.name}</h2>
+      <p>${card.meaning}</p>
+      <p class="tarot-note">${texts[currentLang].note}</p>
+    </div>
   `;
-
-  resultBox.appendChild(cardElement);
 });
+
+updateTexts();
