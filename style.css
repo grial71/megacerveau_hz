@@ -456,3 +456,27 @@ footer{
         left:10px;
     }
 }
+
+.tarot-access {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.tarot-link {
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 18px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(255, 152, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarot-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 152, 0, 0.7);
+}
+
+
