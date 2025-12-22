@@ -478,3 +478,27 @@ footer{
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(255, 152, 0, 0.7);
 }
+
+.tarot-back {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-3px);
+}
+
+
